@@ -72,24 +72,51 @@ p {
     margin: auto 40% auto auto;
 }
 
+@media only screen and (max-width: 720px) {
+    h1 {
+        font-size: 150%;
+    }
+
+    h2 {
+        font-size: 130%;
+    }
+
+    h3 {
+        font-size: 120%;
+    }
+
+    h4 {
+        font-size: 110%;
+    }
+
+    h5 {
+        font-size: 100%;
+    }
+
+    p {
+        font-size: 100%;
+        width: 80%;
+    }
+}
+
 a {
     text-decoration: none;
 }
 
 .layer1 {
-    padding: 2rem 4rem 2rem 4rem;
+    padding: 2% 5% 2% 5%;
 }
 
 .layer2 {
-    padding: 0 4rem 0 4rem;
+    padding: 0 5% 0 5%;
 }
 
 .layer3 {
-    padding: 0 4rem 0 4rem;
+    padding: 0 5% 0 5%;
 }
 
 .layer4 {
-    padding: 0 4rem 0 4rem;
+    padding: 0 5% 0 5%;
 }
 
 .layer1 > h1 {
