@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jeremy's Colors</title>
+		<link rel="stylesheet" type="text/css" href="css/colorsPreview.css">
+		<script src="js/colorPreview.js" defer></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="https://www.linkedin.com/in/jeremymekker/" target="_blank">
+				<p>LinkedIn</p>
+			</a>
+			<br>
+			<a href="https://www.instagram.com/jeremy_mekker/" target="_blank">
+				<p>Instagram</p>
+			</a>
+		</div>
+
+		<div class="layer1">
+			<a href="index.html">Home</a>
+			<a href="javascript:window.history.back();">Back</a>
+			<br>
+			<br>
+			<div class="layer2">
+				<h1>Hello again. 👋 <br> While this explains the Colors page, it also applies to most of the
+					websites in my portfolio.</h1>
+				<br>
+				<h1>Here's the Javascript. (with comments 👍)</h1>
+				<br>
+				<br>
+				<pre>
+	let count = 0;		// This is to alternate between which object to change.
+	let multiplier = 225;	// Change this to alter the maximum allowable contrast.
+	let adder = 30;		// Change this to alter the minimum allowable contrast.
+				// Make sure these two numbers, added up, do not exceed 255.
+				</pre>
+				<p>/* <br> Note: I adjusted the values for this page specifically so that it's more readable. The
+					multiplier
+					and adder values on this page are 130 and 125 respectively. <br> */ </p>
+				<pre>
+
+	function changeAllColors() {	// This changes all of the colors to some (kinda) random colors
+		let x1 = Math.floor(Math.random() * multiplier + adder);
+		let x2 = Math.floor(Math.random() * multiplier + adder);
+		let x3 = Math.floor(Math.random() * multiplier + adder);
+		let background = rgbToHex(x1, x2, x3);
+
+		let y1 = Math.floor(Math.random() * multiplier);
+		let y2 = Math.floor(Math.random() * multiplier);
+		let y3 = Math.floor(Math.random() * multiplier);
+		let text = rgbToHex(y1, y2, y3);
+
+		let z1 = Math.floor(Math.random() * multiplier + adder);
+		let z2 = Math.floor(Math.random() * multiplier + adder);
+		let z3 = Math.floor(Math.random() * multiplier + adder);
+		let glow = rgbToHex(z1, z2, z3);
+
+		document.querySelector(':root').style.setProperty('--background', background);
+		document.querySelector(':root').style.setProperty('--text', text);
+		document.querySelector(':root').style.setProperty('--glow', glow);
+	}
+
+	function changeColors() {	//This changes only one object at a time, alternating between them.
+		if (count == 0) {
+			let x1 = Math.floor(Math.random() * multiplier + adder);
+			let x2 = Math.floor(Math.random() * multiplier + adder);
+			let x3 = Math.floor(Math.random() * multiplier + adder);
+			let background = rgbToHex(x1, x2, x3);
+
+			document.querySelector(':root').style.setProperty('--background', background);
+			count++;
+		} else if (count == 1) {
+			let y1 = Math.floor(Math.random() * multiplier);
+			let y2 = Math.floor(Math.random() * multiplier);
+			let y3 = Math.floor(Math.random() * multiplier);
+			let text = rgbToHex(y1, y2, y3);
+
+			document.querySelector(':root').style.setProperty('--text', text);
+			count++;
+		} else {
+			let z1 = Math.floor(Math.random() * multiplier + adder);
+			let z2 = Math.floor(Math.random() * multiplier + adder);
+			let z3 = Math.floor(Math.random() * multiplier + adder);
+			let glow = rgbToHex(z1, z2, z3);
+
+			document.querySelector(':root').style.setProperty('--glow', glow);
+			count = 0;
+		}
+	}
+
+	function rgbToHex(r, g, b) {	// This changes the RGB(#, #, #) that we generate into a hex (like #aabbcc)
+		return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+	} 
+
+	window.onload=function () {	// This changes all of the colors as soon as the page loads.
+		changeAllColors();
+	};
+				</pre>
+				<br>
+				<br>
+				<br>
+				<h1>I have too much CSS 😞, so here's only the relevant stuff for the javascript to work.</h1>
+				<br>
+				<br>
+				<pre>
+	:root {
+		--background: #e0d3af;	/* Initial color values */
+		--text: #2f3d8a;	/* I change these whenever the window loads so it's kind of useless */
+		--glow: #ffffff;	/* If someone doesn't have javascript enabled, then these are used */
+	}
+
+	background-color: var(--background);	/* Using variable color values instead */
+	color: var(--text);
+	text-shadow: 0px 0px 5px var(--glow),... ;
+	/* I use text-shadows a lot, but here's just one line to show how to use it. */
+	/* This concept can also apply to drop-shadows, but I don't use those here */
+
+
+	/* This allows me to only have to adjust the colors inside of the :root object */
+				</pre>
+				<br>
+				<h1>Buttons to change the colors here 🌈</h1>
+				<p id="colors" onclick="changeAllColors()"> --&gt; All colors &lt;-- </p>
+				<p id="colors" onclick="changeColors()"> --&gt; One at a time &lt;-- </p>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+	</body>
+
+</html>

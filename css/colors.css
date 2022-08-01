@@ -1,0 +1,262 @@
+:root {
+    --background: #e0d3af;
+    --text: #2f3d8a;
+    --glow: #ffffff;
+}
+
+* {
+    transition: 1s;
+    margin: auto;
+}
+
+body {
+    transition: 1s;
+    background-color: var(--background);
+    color: var(--text);
+    text-shadow: 0px 0px 5px var(--glow), 0px 0px 5px var(--glow),
+        0px 0px 5px var(--glow);
+    padding: 0 1rem 0 1rem;
+
+    filter: drop-shadow(0 0 20rem var(--glow));
+}
+
+h1 {
+    font-size: 3.157rem;
+    font-weight: normal;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin: auto;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: auto;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: auto;
+}
+
+h5 {
+    transition: 1s;
+    text-shadow: 0px 0px 5px var(--glow), 0px 0px 5px var(--glow),
+        0px 0px 5px var(--glow);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: auto;
+}
+
+p {
+    transition: 1s;
+    text-shadow: 0px 0px 2px var(--glow), 0px 0px 2px var(--glow),
+        0px 0px 2px var(--glow);
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: auto 60% auto auto;
+}
+
+@media only screen and (max-width: 720px) {
+    h1 {
+        font-size: 150%;
+    }
+
+    h2 {
+        font-size: 130%;
+    }
+
+    h3 {
+        font-size: 120%;
+    }
+
+    h4 {
+        font-size: 110%;
+    }
+
+    h5 {
+        font-size: 100%;
+    }
+
+    p {
+        font-size: 100%;
+        width: 80%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.layer1 {
+    padding: 2% 5% 2% 5%;
+}
+
+.layer2 {
+    padding: 0 5% 0 5%;
+}
+
+.layer3 {
+    padding: 0 5% 0 5%;
+}
+
+.layer4 {
+    padding: 0 5% 0 5%;
+}
+
+.layer1 > h1 {
+    transition: 1s;
+    text-shadow: 0px 0px 2px var(--glow), 0px 0px 2px var(--glow),
+        0px 0px 2px var(--glow);
+    color: var(--text);
+}
+
+.layer1 > h3 {
+    font-weight: lighter;
+}
+
+.layer2 > h1 {
+    transition: 1s;
+    text-shadow: 0px 0px 2px var(--glow), 0px 0px 2px var(--glow),
+        0px 0px 2px var(--glow);
+    color: var(--text);
+}
+
+.layer2 > h3 {
+    font-weight: lighter;
+}
+
+.layer3#index {
+    filter: drop-shadow(0 0 8rem var(--glow));
+}
+
+.layer3 > h1 {
+    transition: 1s;
+    text-shadow: 0px 0px 2px var(--glow), 0px 0px 2px var(--glow),
+        0px 0px 2px var(--glow);
+    color: var(--text);
+}
+
+.layer3 > h2 {
+    transition: 1s;
+    text-shadow: 0px 0px 2px var(--glow), 0px 0px 2px var(--glow),
+        0px 0px 2px var(--glow);
+    color: var(--text);
+}
+
+* > * > a {
+    transition: 1.2s;
+    text-shadow: 0px 0px 2px var(--glow), 0px 0px 2px var(--glow),
+        0px 0px 2px var(--glow);
+    color: var(--text);
+}
+
+* > * > a:hover {
+    transition: 1s;
+    text-shadow: 0px 0px 10px var(--glow), 0px 0px 10px var(--glow),
+        0px 0px 10px var(--glow);
+    color: var(--text);
+}
+
+.layer3 > h3 {
+    font-weight: lighter;
+}
+
+.layer4 > h1 {
+    transition: 1s;
+    text-shadow: 0px 0px 2px var(--glow), 0px 0px 2px var(--glow),
+        0px 0px 2px var(--glow);
+    color: var(--text);
+}
+
+.layer4 > h3 {
+    font-weight: lighter;
+}
+
+img {
+    transition: 1s;
+    filter: drop-shadow(1rem 1rem 100rem var(--glow));
+}
+
+img:hover {
+    transition: 1s;
+    filter: drop-shadow(0 0 1rem var(--glow));
+}
+
+* > h1:hover {
+    transition: 1s;
+    color: var(--text);
+    filter: drop-shadow(0 0 1rem var(--glow));
+}
+
+* > h2:hover {
+    transition: 1s;
+    color: var(--text);
+    filter: drop-shadow(0 0 1rem var(--glow));
+}
+
+* > h3:hover {
+    transition: 1s;
+    color: var(--text);
+    filter: drop-shadow(0 0 1rem var(--glow));
+}
+
+* > h4:hover {
+    transition: 1s;
+    color: var(--text);
+    filter: drop-shadow(0 0 1rem var(--glow));
+}
+
+* > h5:hover {
+    transition: 1s;
+    color: var(--text);
+    filter: drop-shadow(0 0 1rem var(--glow));
+}
+
+* > p:hover {
+    transition: 1s;
+    color: var(--text);
+    filter: drop-shadow(0 0 1rem var(--glow));
+}
+
+h1#colors {
+    transition: 1s;
+    text-shadow: 0px 0px 2px var(--glow), 0px 0px 2px var(--glow),
+        0px 0px 2px var(--glow);
+    color: var(--text);
+}
+
+h1#colors:hover {
+    transition: 1s;
+    text-shadow: 0px 0px 5px var(--glow), 0px 0px 10px var(--glow),
+        0px 0px 15px var(--glow), 0px 0px 20px var(--glow);
+    color: var(--text);
+    filter: drop-shadow(0 0 1rem var(--glow));
+}
+
+.header {
+    margin: 20px 20px 20px 20px;
+    float: right;
+}
+
+.header > * > p {
+    margin: 0 0 0 -2px;
+}
+
+.header > a > img {
+    margin-left: 20px;
+    transition: 0.5s;
+    filter: drop-shadow(0rem 0rem 0.5rem var(--glow));
+}
+
+.header > a > img:hover {
+    margin-left: 20px;
+    transition: 0.5s;
+    filter: drop-shadow(0rem 0rem 1rem var(--glow));
+}
