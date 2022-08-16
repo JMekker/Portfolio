@@ -231,7 +231,7 @@ img:hover {
 * > p:hover {
     transition: 1s;
     color: var(--cyan);
-    filter: drop-shadow(0 0 1rem var(--yellow));
+    filter: drop-shadow(0 0 1rem var(--cyan));
 }
 
 h1#me {
